@@ -1,0 +1,121 @@
+/*http://meyerweb.com/eric/tools/css/reset
+ v2.0| 20110126
+ License: none (public domain)
+*/
+/* stylelint-disable */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit}ol,ul{list-style: none}blockquote,q{quotes: none}blockquote:after,blockquote:before,q:after,q:before{content: '';content: none}table{border-collapse:collapse;border-spacing: 0}
+
+/* style-lint enable */
+/*
+ em - relative to the font-size of the element
+ 1 px = 1/96th of 1in
+ 1 em = 18px
+ 1 lead = 22px
+ padding: top, right, bottom, left
+*/
+/* Begin site styles below */
+html {
+  font-size:1.125em; /* 18px / 16px = 1.125em */
+  line-height: 1.222em; /* 22px / 18px = 1.222 em */
+  padding:1.222em 1em; /* 1.222em top & bottom, 1em right & left */
+  font-family: Merriweather, "Times New Roman", serif;
+}
+
+body {
+  background-color: #f5f5dc; /* beige */
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bolder;
+}
+
+h3 {
+  font-size:1.125em;/* 18px / 16px = 1.125em */
+  line-height: 1.222em;/* 22px / 18px = 1.222 em */
+  padding: 0.6111em; /* (1/2 lead) 11 px / 18px = 0.6111em*/
+}
+
+p {
+  padding: 0 0 0.6111em 1.222em; /* bottom, left padding*/
+}
+
+ol {
+  padding: 0 0 0.6111em 1.222em; /* bottom, left padding*/
+  list-style-type: square;
+}
+
+ul {
+  padding: 0 0 0.6111em 1.222em; /* bottom, left padding */
+  list-style-type: disc;
+}
+
+li {
+  padding-bottom: 0.2727em; /* 5 px / 22px = 0.2727em */
+}
+
+#my-address,
+#tvpics,
+#gen-info, h1 {
+  padding-top: 2em; /* 2 * 18px = 36px = 2em */
+}
+
+#my-address ul li {
+  list-style-type: none;
+}
+#name {
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+ul.compare li b {
+  font-weight: bolder;
+}
+/* Responsive images styles */
+img {
+  display:block;
+  max-width: 100%;
+}
+
+figcaption {
+  font-weight: bolder;
+  font-size: 0.75em;
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+
+/* Module/Modular section (class or descedent selectors; repeating specific styles) */
+#home #navi-home a,
+#my-resume #navi-resume a,
+#my-tvland #navi-tvland a {
+  background: #AED6F1; /*lightblue*/
+  color: #273746; /* grey*/
+}
+
+ul.navi {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* State (repeat the structure above; media queries, JavaScript-dependent styles) */
+
+@media screen and (min-width: 430px) {
+  #tvpics {
+    margin: 0 25% 0 25%; /* center image horizontally */
+  }
+}
+
+@media screen and (min-width: 780px) {
+  html {
+    font-size: 20px;
+    padding: 10%;
+  }
+
+  body {
+    margin:auto;
+    padding: 1.222em;
+  }
+
+}
