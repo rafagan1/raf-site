@@ -42,9 +42,9 @@
     // ===============Image gallery
     // Get list of all images
     var trekies = document.querySelectorAll(".gallery li");
-    console.log(trekies.length);
+  //  console.log(trekies.length);
     for (var i = 0; i < trekies.length; i++) {
-      console.log('Click Event 33');
+
       var trek = trekies[i];
       // Create button for each image and add text
       // to the button
@@ -74,7 +74,6 @@
 
       // Add the newly created button to the list item
       trek.append(trek_b);
-      console.log('Click Event 34.');
     }
 
     // Return if not on tvland page
@@ -108,7 +107,7 @@
 
       // Apply logic to each image identified by the id tag
       // on each associated list item
-      console.log(event.target.parentNode.id);
+      //console.log(event.target.parentNode.id);
       switch (event.target.parentNode.id) {
       case "enterprise":
         // Get button (by id) below each image in the list
