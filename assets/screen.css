@@ -75,6 +75,7 @@ li {
   padding-bottom: 1em;
   padding-top:1em;
 }
+
 ul.compare li b {
   font-weight: bolder;
 }
@@ -109,9 +110,30 @@ a#menu-button:focus {
   background: red;
 }
 
-.treky {
- display:none;
+#tvland h2 {
+  color: green;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 1em;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.gallery {
+  background: #444;
+  overflow: auto;
+  padding: 0.05em;
+  list-style-type: none;
+}
+.gallery li {
+  border: 0.05em dotted lightblue;
+  box-sizing: border-box;
+  padding: 0.05em;
+}
+
 /* State Styles */
 .js .gallery {
   color: green;
@@ -130,20 +152,22 @@ a#menu-button:focus {
 
 .js .treky {
  display:block;
+ padding-top: 0.5em;
 }
+
 img {
   display: block;
   max-width: 100%;
 }
 
 .gallery {
-  background: #222;
+  background: #444;
   overflow: auto;
   padding: 0.05em;
   list-style-type: none;
 }
 .gallery li {
-  border: 0.05em solid #777;
+  border: 0.05em dotted lightblue;
   box-sizing: border-box;
   padding: 0.05em;
 }
@@ -152,6 +176,8 @@ img {
   .gallery {
     display: flex;
     flex-flow: row wrap-reverse;
+    margin:0 auto 0 auto;
+    width:75%;
   }
 
   figcaption {
@@ -173,6 +199,7 @@ img {
     grid-template-rows: repeat(2, auto); /* 2 rows */
     grid-column-gap: 0.1em;
     grid-row-gap: 0.1em;
+    width:80%;
   }
   .gallery img {
     object-fit: cover;
