@@ -115,6 +115,7 @@ a#menu-button:focus {
   font-weight: bolder;
   text-align: center;
   padding-bottom: 1em;
+  padding-top: 2em;
 }
 
 img {
@@ -150,9 +151,12 @@ img {
   display: block;
 }
 
-.js .treky {
- display:block;
- padding-top: 0.5em;
+.treky {
+  background-color: lightblue;
+  display:inline-block;
+  font-size: 0.5em;
+  font-weight: bolder;
+  padding-top: 0.5em;
 }
 
 img {
