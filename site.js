@@ -9,10 +9,10 @@
   html.classList.remove('nojs');
   html.classList.add('js');
 
-  document.addEventListener('DOMContentLoaded', function(e){
+  document.addEventListener('DOMContentLoaded', function(){
     console.log('DOM loaded');
 
-    //=====================NAVIGATION from class demo
+    // =====================NAVIGATION from class demo
     var navigation = document.querySelector('#navigation');
     var nav_list = document.querySelector('.navi');
 
@@ -21,15 +21,15 @@
     // Build the inner anchor/link element
     var menu_link = document.createElement('a');
     menu_link.textContent = 'Menu';
-    menu_link.setAttribute('id','menu-button');
-    menu_link.setAttribute('href','#null');
+    menu_link.setAttribute('id', 'menu-button');
+    menu_link.setAttribute('href', '#null');
     menu_link.setAttribute('tabindex', '1');
 
     // Append the menu_link to the h2 element
     nav_heading.append(menu_link);
 
     // Finally, append the nav_heading to the nav element
-    navigation.insertBefore(nav_heading,nav_list);
+    navigation.insertBefore(nav_heading, nav_list);
 
     // Listen for clicks on #menu-button and toggle the
     // visible class
@@ -42,7 +42,7 @@
     // ===============Image gallery
     // Get list of all images
     var trekies = document.querySelectorAll(".gallery li");
-  //  console.log(trekies.length);
+    //  console.log(trekies.length);
     for (var i = 0; i < trekies.length; i++) {
 
       var trek = trekies[i];
@@ -52,20 +52,20 @@
       trek_b.textContent='Click image for message';
 
       // Add a class attribute to each button
-      trek_b.setAttribute('class','treky');
+      trek_b.setAttribute('class', 'treky');
 
       // Get the id of the list item associated with
       // each image and set a corresponding id on the
       // newly ceated button.
       switch(trek.id) {
       case "enterprise":
-        trek_b.setAttribute('id','trek1');
+        trek_b.setAttribute('id', 'trek1');
         break;
       case "spock":
-        trek_b.setAttribute('id','trek2');
+        trek_b.setAttribute('id', 'trek2');
         break;
       case "voy-side":
-        trek_b.setAttribute('id','trek3');
+        trek_b.setAttribute('id', 'trek3');
         break;
       default:
         console.log('Invalid button id');
@@ -77,7 +77,7 @@
     }
 
     // Return if not on tvland page
-    if (trekies.length == 0) {
+    if (trekies.length === 0) {
       return;
     }
     // Get the gallery of star trek images
@@ -102,18 +102,18 @@
       // list item:
       event.target.parentNode.className = 'focus';
 
-      // Diagnostic: log the tag name of the parent node that's been clicked
+      // Diagnostic: log the tag name of the parent node that was clicked
       console.log(event.target.parentNode.tagName);
 
       // Apply logic to each image identified by the id tag
       // on each associated list item
-      //console.log(event.target.parentNode.id);
+      // console.log(event.target.parentNode.id);
       switch (event.target.parentNode.id) {
       case "enterprise":
         // Get button (by id) below each image in the list
         // and add replace the text on the button.
         var trek_button = document.getElementById("trek1");
-        if (trek_button.textContent == "Click image for message") {
+        if (trek_button.textContent === "Click image for message") {
           trek_button.textContent = 'To infinity and beyond!!!';
         } else {
           trek_button.textContent = "Click image for message";
@@ -121,7 +121,7 @@
         break;
       case "spock":
         trek_button = document.getElementById("trek2");
-        if (trek_button.textContent == "Click image for message") {
+        if (trek_button.textContent === "Click image for message") {
           trek_button.textContent = 'Live Long and Prosper';
         } else {
           trek_button.textContent = "Click image for message";
@@ -129,7 +129,7 @@
         break;
       case "voy-side":
         trek_button = document.getElementById("trek3");
-        if (trek_button.textContent == "Click image for message") {
+        if (trek_button.textContent === "Click image for message") {
           trek_button.textContent = 'Space, the final frontier';
         } else {
           trek_button.textContent = "Click image for message";
