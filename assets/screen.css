@@ -159,11 +159,6 @@ img {
   padding-top: 0.5em;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
 .gallery {
   background: #444;
   overflow: auto;
